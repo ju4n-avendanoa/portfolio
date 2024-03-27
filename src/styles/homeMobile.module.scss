@@ -1,0 +1,148 @@
+@import "mixins";
+
+.mobile {
+  @include lg {
+    display: none;
+  }
+
+  .showcase {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding: 60px 10px 30px;
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      z-index: 10;
+      padding-top: 40px;
+      position: relative;
+
+      @include md {
+        width: 100%;
+        gap: 40px;
+      }
+
+      @include lg {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .name {
+        font-size: 30px;
+        height: auto;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        z-index: 10;
+
+        @include md {
+          height: auto;
+        }
+
+        h1 {
+          font-weight: bold;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      .photo {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        object-fit: cover;
+        z-index: 20;
+        transform: translateX(10px);
+        background-color: #4682b4;
+        border-radius: 82% 18% 70% 30% / 40% 68% 32% 60%;
+      }
+
+      .background1 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #ff007f;
+        top: 156px;
+        border-radius: 29% 71% 64% 36% / 40% 68% 32% 60%;
+        opacity: 0.5;
+        @include md {
+          top: 166px;
+        }
+      }
+      .background2 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #8a2be2;
+        top: 156px;
+        border-radius: 40% 60% 64% 36% / 40% 68% 32% 60%;
+        opacity: 0.5;
+        @include md {
+          top: 166px;
+        }
+      }
+      .background3 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #3cb371;
+        top: 156px;
+        border-radius: 54% 46% 64% 36% / 40% 68% 32% 60%;
+        opacity: 0.5;
+        @include md {
+          top: 166px;
+        }
+      }
+
+      @keyframes colorChange {
+        0% {
+          background-color: #8a2be2;
+        }
+        33% {
+          background-color: #ff007f;
+        }
+        66% {
+          background-color: #4682b4;
+        }
+        100% {
+          background-color: #3cb371;
+        }
+      }
+
+      .intro {
+        font-size: 18px;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @include md {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  button {
+    color: white;
+    background-color: transparent;
+    z-index: 10;
+    padding: 10px 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+    transition: transform 1s;
+    cursor: pointer;
+  }
+
+  button:active {
+    transform: scale(0.9);
+  }
+}
