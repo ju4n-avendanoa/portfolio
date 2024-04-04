@@ -20,7 +20,7 @@ const variants = {
   },
 };
 
-function Menu() {
+function MenuMobile() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -38,4 +38,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default MenuMobile;

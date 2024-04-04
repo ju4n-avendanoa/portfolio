@@ -1,0 +1,123 @@
+@import "mixins";
+$photo-size-xs: 150px;
+$photo-size-sm: 175px;
+$photo-size-md: 200px;
+$photo-size-lg: 225px;
+$photo-size-xl: 275px;
+$blob-backgorund-opacity: 0.8;
+
+.photoContainer {
+  position: relative;
+
+  .photo {
+    position: relative;
+    width: $photo-size-xs;
+    height: $photo-size-xs;
+    overflow: hidden;
+    object-fit: cover;
+    z-index: 20;
+    background-color: #4682b4;
+    border-radius: 82% 18% 70% 30% / 40% 68% 32% 60%;
+
+    @include sm {
+      width: $photo-size-sm;
+      height: $photo-size-sm;
+    }
+    @include md {
+      width: $photo-size-md;
+      height: $photo-size-md;
+    }
+    @include lg {
+      width: $photo-size-lg;
+      height: $photo-size-lg;
+    }
+    @include xl {
+      width: $photo-size-xl;
+      height: $photo-size-xl;
+    }
+  }
+
+  .greenBackground {
+    position: absolute;
+    width: $photo-size-xs;
+    height: $photo-size-xs;
+    background-color: #3cb371;
+    top: 0px;
+    z-index: 0;
+    border-radius: 29% 71% 64% 36% / 40% 68% 32% 60%;
+    opacity: $blob-backgorund-opacity;
+
+    @include sm {
+      width: $photo-size-sm;
+      height: $photo-size-sm;
+    }
+    @include md {
+      width: $photo-size-md;
+      height: $photo-size-md;
+    }
+    @include lg {
+      width: $photo-size-lg;
+      height: $photo-size-lg;
+    }
+    @include xl {
+      width: $photo-size-xl;
+      height: $photo-size-xl;
+    }
+  }
+
+  .pinkBackground {
+    position: absolute;
+    width: $photo-size-xs;
+    height: $photo-size-xs;
+    background-color: #ff007f;
+    top: 0px;
+    border-radius: 40% 60% 64% 36% / 40% 68% 32% 60%;
+    opacity: $blob-backgorund-opacity;
+    z-index: 0;
+
+    @include sm {
+      width: $photo-size-sm;
+      height: $photo-size-sm;
+    }
+    @include md {
+      width: $photo-size-md;
+      height: $photo-size-md;
+    }
+    @include lg {
+      width: $photo-size-lg;
+      height: $photo-size-lg;
+    }
+    @include xl {
+      width: $photo-size-xl;
+      height: $photo-size-xl;
+    }
+  }
+
+  .purpleBackground {
+    position: absolute;
+    width: $photo-size-xs;
+    height: $photo-size-xs;
+    background-color: #8a2be2;
+    top: 0px;
+    border-radius: 54% 46% 64% 36% / 40% 68% 32% 60%;
+    opacity: $blob-backgorund-opacity;
+    z-index: 0;
+
+    @include sm {
+      width: $photo-size-sm;
+      height: $photo-size-sm;
+    }
+    @include md {
+      width: $photo-size-md;
+      height: $photo-size-md;
+    }
+    @include lg {
+      width: $photo-size-lg;
+      height: $photo-size-lg;
+    }
+    @include xl {
+      width: $photo-size-xl;
+      height: $photo-size-xl;
+    }
+  }
+}

@@ -8,6 +8,10 @@
   background-color: #121212;
   height: 60px;
 
+  @include lg {
+    padding: 20px 100px;
+  }
+
   h4 {
     color: white;
   }
@@ -46,7 +50,15 @@
         .list {
           color: white;
           text-decoration: none;
-          font-size: 1.5rem;
+          font-size: 1.1rem;
+
+          @include sm {
+            font-size: 1.3rem;
+          }
+
+          @include md {
+            font-size: 1.5rem;
+          }
         }
       }
     }
@@ -64,6 +76,28 @@
       .svg .path {
         color: white;
       }
+    }
+  }
+
+  .links {
+    display: none;
+
+    @include lg {
+      font-size: 1.1rem;
+      display: flex;
+      list-style-type: none;
+      gap: 38px;
+    }
+
+    .list {
+      color: white;
+      text-decoration: none;
+    }
+
+    .active {
+      font-size: 1.1rem;
+      color: #6fa2cc;
+      text-underline-offset: 8px;
     }
   }
 }

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styles from "@/styles/navbar/navbar.module.scss";
 import Link from "next/link";
 
-const items = ["Home", "About", "Skills", "Projects"];
+const items = ["Home", "About", "Projects", "Contact"];
 
 const variants = {
   open: {

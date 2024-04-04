@@ -1,0 +1,21 @@
+@import "mixins";
+
+.carreer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+
+  @include sm {
+    font-size: 1.2rem;
+  }
+
+  @include md {
+    font-size: 1.3rem;
+  }
+
+  @include lg {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+}

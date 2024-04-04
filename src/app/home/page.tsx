@@ -1,13 +1,14 @@
-// "use client";
-
-import MainPageMobile from "@/components/MainPageMobile";
-import MainPagePc from "@/components/MainPagePc";
+import Showcase from "@/components/Showcase";
+import Mobile from "@/components/mainPage/Mobile";
+import Laptop from "@/components/mainPage/Laptop";
 
 export default function Home() {
   return (
     <main>
-      <MainPagePc />
-      <MainPageMobile />
+      <Showcase>
+        <Mobile />
+        <Laptop />
+      </Showcase>
     </main>
   );
 }

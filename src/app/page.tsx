@@ -1,12 +1,15 @@
-import MainPageMobile from "@/components/MainPageMobile";
-import MainPagePc from "@/components/MainPagePc";
+import Showcase from "@/components/Showcase";
+import Mobile from "@/components/mainPage/Mobile";
+import Laptop from "@/components/mainPage/Laptop";
 
 function MainPage() {
   return (
-    <>
-      <MainPagePc />
-      <MainPageMobile />
-    </>
+    <main>
+      <Showcase>
+        <Mobile />
+        <Laptop />
+      </Showcase>
+    </main>
   );
 }
 

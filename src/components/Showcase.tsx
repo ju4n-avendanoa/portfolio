@@ -1,19 +1,22 @@
 "use client";
+
 import {
   animate,
   motion,
   useMotionTemplate,
   useMotionValue,
 } from "framer-motion";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { ReactNode, useEffect } from "react";
+import { IoMdDownload } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
-import styles from "@/styles/homePc.module.scss";
+import styles from "@/styles/home.module.scss";
 
 const colors = ["#8A2BE2", "#FF007F", "#4682B4", "#3CB371"];
 
-function ShowcasePc({ children }: { children: ReactNode }) {
+function ShowcaseMobile({ children }: { children: ReactNode }) {
   const router = useRouter();
   const color = useMotionValue(colors[0]);
 
@@ -24,7 +27,7 @@ function ShowcasePc({ children }: { children: ReactNode }) {
   useEffect(() => {
     animate(color, colors, {
       ease: "easeInOut",
-      duration: 10,
+      duration: 6,
       repeat: Infinity,
       repeatType: "mirror",
     });
@@ -39,7 +42,7 @@ function ShowcasePc({ children }: { children: ReactNode }) {
     >
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           inset: "0px",
           zIndex: "0",
         }}
@@ -49,17 +52,30 @@ function ShowcasePc({ children }: { children: ReactNode }) {
         </Canvas>
       </div>
       {children}
-      <motion.button
-        style={{
-          border,
-          boxShadow,
-        }}
-        onClick={() => router.push("/about")}
-      >
-        About me
-      </motion.button>
+      <div className={styles.buttons}>
+        <motion.button
+          style={{
+            border,
+            boxShadow,
+          }}
+          onClick={() => router.push("/about")}
+        >
+          <span>About me</span>
+          <FaArrowUpRightFromSquare className={styles.buttonIcon} />
+        </motion.button>
+
+        <motion.button
+          style={{
+            border,
+            boxShadow,
+          }}
+        >
+          <span>Download CV</span>
+          <IoMdDownload className={styles.buttonIcon} />
+        </motion.button>
+      </div>
     </motion.div>
   );
 }
 
-export default ShowcasePc;
+export default ShowcaseMobile;
