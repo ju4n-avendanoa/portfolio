@@ -1,0 +1,21 @@
+@import "mixins.scss";
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  padding: 5px;
+  color: #ffffff;
+  background: linear-gradient(to right, #8a2be2, #ff007f, #4682b4, #3cb371);
+
+  @include sm {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include md {
+    width: 50px;
+    height: 50px;
+  }
+}

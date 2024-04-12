@@ -4,6 +4,8 @@ import "@/styles/globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import styles from "@/styles/header.module.scss";
 import Provider from "@/context/Provider";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import StarsBackground from "@/components/Stars";
 
 const mulish = Mulish({ subsets: ["latin"] });
 
@@ -21,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={mulish.className}>
         <Provider>
+          <StarsBackground />
           <header className={styles.header}>
             <Navbar />
           </header>

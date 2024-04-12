@@ -1,0 +1,63 @@
+@import "mixins.scss";
+
+$colors: #8a2be2, #ff007f, #4682b4, #3cb371;
+
+.skillsGrid {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  justify-self: start;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  @each $color in $colors {
+    &:nth-child(#{length($colors)}n + #{index($colors, $color)}) {
+      box-shadow: 5px 5px 20px $color;
+    }
+  }
+
+  @include lg {
+    @each $color in $colors {
+      &:nth-child(#{length($colors)}n + #{index($colors, $color)}) {
+        box-shadow: 10px 10px 20px $color;
+      }
+    }
+  }
+  @include xl {
+    @each $color in $colors {
+      &:nth-child(#{length($colors)}n + #{index($colors, $color)}) {
+        box-shadow: 10px 10px 30px $color;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    @include sm {
+      font-size: 1.5rem;
+    }
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+
+    @include sm {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.skillsGrid:hover {
+  transform: scale(1.05);
+}

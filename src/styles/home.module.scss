@@ -5,7 +5,7 @@ $photo-size-md: 200px;
 $photo-size-lg: 250px;
 $blob-backgorund-opacity: 0.8;
 
-.showcase {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,6 @@ $blob-backgorund-opacity: 0.8;
     .name {
       font-size: 1.3rem;
       height: auto;
-      width: 311px;
       flex-direction: column;
       display: flex;
       align-items: center;
@@ -91,7 +90,7 @@ $blob-backgorund-opacity: 0.8;
     }
 
     @include xl {
-      gap: 120px;
+      gap: 100px;
     }
 
     .text {
@@ -101,7 +100,6 @@ $blob-backgorund-opacity: 0.8;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 20px;
-        // width: 50%;
         height: 100%;
       }
 
