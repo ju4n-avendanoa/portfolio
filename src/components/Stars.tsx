@@ -14,7 +14,7 @@ function StarsBackground() {
       }}
     >
       <Canvas>
-        <Stars radius={80} count={1000} factor={6} fade speed={2} />
+        <Stars radius={70} count={1800} factor={6} fade speed={2} />
       </Canvas>
     </div>
   );
