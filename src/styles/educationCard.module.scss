@@ -17,7 +17,6 @@ $colors: #8a2be2, #ff007f, #4682b4, #3cb371;
   border: 1px solid white;
   width: 100%;
   font-size: 0.8rem;
-  transition: transform 0.3s ease;
 
   @each $color in $colors {
     &:nth-child(#{length($colors)}n + #{index($colors, $color)}) {
@@ -44,11 +43,9 @@ $colors: #8a2be2, #ff007f, #4682b4, #3cb371;
   }
 
   @include lg {
+    padding: 30px;
     width: 40%;
-  }
-
-  &:hover {
-    transform: scale(1.03);
+    min-height: 155px;
   }
 
   .info {

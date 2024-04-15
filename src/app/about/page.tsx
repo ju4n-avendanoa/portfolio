@@ -1,9 +1,6 @@
-"use client";
-
 import { IoExtensionPuzzleSharp } from "react-icons/io5";
 import { FaGraduationCap } from "react-icons/fa6";
 import { FaLaptopCode } from "react-icons/fa6";
-import { motion } from "framer-motion";
 import { GoGear } from "react-icons/go";
 import { IoBag } from "react-icons/io5";
 import { FaInfo } from "react-icons/fa";
@@ -17,17 +14,7 @@ import iconStyles from "@/styles/aboutIcon.module.scss";
 function page() {
   return (
     <main className={styles.main}>
-      <motion.section
-        className={styles.biography}
-        variants={{
-          hidden: { opacity: 0, y: 0.75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.5, delay: 0.25 }}
-        viewport={{ once: true }}
-      >
+      <section className={styles.biography}>
         <div className={styles.headers}>
           <h1>About</h1>
           <FaInfo className={iconStyles.icon} />
@@ -35,27 +22,16 @@ function page() {
         <p>
           After graduating as a mechanical engineer, I embarked on a new journey
           in full-stack web development. With a strong foundation in both
-          front-end and back-end technologies, I am currently expanding my
-          skills through certification in web development. My expertise ranges
-          from crafting engaging user interfaces to developing robust
-          server-side applications. The transition into web development was
-          driven by a pursuit of fulfillment and a passion for meaningful work.
-          Now, I am actively seeking a full-time position as a software
-          developer, eager to contribute my skills and passion to meaningful
-          projects.
+          front-end and back-end technologies, I am currently certifying in web
+          development. My expertise ranges from crafting engaging user
+          interfaces to developing robust server-side applications. My
+          transition into web development stemmed from a desire to pursue
+          happiness and engage in work that truly ignites my soul. Now, I am
+          actively seeking a full-time position as a software developer, eager
+          to contribute my skills and passion to meaningful projects.
         </p>
-      </motion.section>
-      <motion.section
-        className={styles.skills}
-        variants={{
-          hidden: { opacity: 0, y: 0.75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.5, delay: 0.25 }}
-        viewport={{ once: true }}
-      >
+      </section>
+      <section className={styles.skills}>
         <div className={styles.headers}>
           <h2 className={styles.seccionTitle}>Skills</h2>
 
@@ -178,50 +154,26 @@ function page() {
               image="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
               name="React Native"
             />
-            <Skill
-              image="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg"
-              name="NestJS"
-            />
           </SkillsGrid>
         </div>
-      </motion.section>
-      <motion.section
-        className={styles.experience}
-        variants={{
-          hidden: { opacity: 0, y: 0.75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.5, delay: 0.25 }}
-        viewport={{ once: true }}
-      >
+      </section>
+      <section className={styles.experience}>
         <div className={styles.headers}>
           <h2 className={styles.seccionTitle}>Experience</h2>
           <IoBag className={iconStyles.icon} />
         </div>
-        <p className={styles.description}>
+        <p>
           Academic background providing a solid foundation to tackle the
           challenges of the professional world.
         </p>
         <TimelineComponent />
-      </motion.section>
-      <motion.section
-        className={styles.education}
-        variants={{
-          hidden: { opacity: 0, y: 0.75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.5, delay: 0.25 }}
-        viewport={{ once: true }}
-      >
+      </section>
+      <section className={styles.education}>
         <div className={styles.headers}>
           <h2 className={styles.seccionTitle}>Education</h2>
           <FaGraduationCap className={iconStyles.icon} />
         </div>
-        <p className={styles.description}>
+        <p>
           Work history reflecting a commitment to excellence and a
           results-oriented approach.
         </p>
@@ -235,11 +187,11 @@ function page() {
           <EducationCard
             degree="Web Developer"
             year="2023-Present"
-            university="Digital House - Argentina"
+            university="Digital House -Argentina"
             icon={<FaLaptopCode className={styles.icon} />}
           />
         </div>
-      </motion.section>
+      </section>
     </main>
   );
 }

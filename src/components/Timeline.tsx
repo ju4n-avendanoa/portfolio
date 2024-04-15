@@ -1,94 +1,67 @@
-"use client";
-
-import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
+import {
+  Timeline,
+  TimelineSeparator,
+  TimelineItem,
+  TimelineConnector,
+  TimelineContent,
+  TimelineOppositeContent,
+} from "@mui/lab";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
-import { FaMoneyCheckAlt } from "react-icons/fa";
 import { FaDatabase } from "react-icons/fa6";
-import { createTheme } from "@mui/material/styles";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import ExperienceCard from "./ExperienceCard";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import Timeline from "@mui/lab/Timeline";
-import iconStyles from "@/styles/iconTimeline.module.scss";
-import styles from "@/styles/timeline.module.scss";
-
-declare module "@mui/material/styles" {
-  interface BreakpointOverrides {
-    xxl: true;
-  }
-}
+import { FaMoneyCheckAlt } from "react-icons/fa";
 
 function TimelineComponent() {
-  const theme = createTheme({
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 376,
-        md: 769,
-        lg: 1025,
-        xl: 1441,
-        xxl: 2561,
-      },
-    },
-  });
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const isLaptop = useMediaQuery(theme.breakpoints.up("md"));
-
   return (
-    <Timeline
-      className={styles.timeline}
-      sx={{
-        [`& .${timelineItemClasses.root}:before`]: {
-          ...(isMobile && {
-            flex: 0,
-            padding: 0,
-          }),
-        },
-      }}
-      position={isLaptop ? "alternate" : undefined}
-    >
-      <TimelineItem className={styles.timelineItem}>
-        <TimelineSeparator className={styles.timelineSeparator}>
-          <FaDatabase className={iconStyles.timelineIcon} />
-          <TimelineConnector className={styles.timelineConnector} />
-        </TimelineSeparator>
-        <TimelineContent className={styles.timelineContent}>
-          <ExperienceCard
-            title="Data Analyst"
-            company="Grupo UMA"
-            date="2022-2023"
-            description="I provided data analysis support to the Corporate Audit Department across six countries, leveraging SQL database querying for efficient extraction and analysis. This included developing and implementing dashboards for continuous monitoring in key areas such as manufacturing, production, procurement, inventory management, and accounts payable."
+    <Timeline position="alternate-reverse" style={{ width: "100vw" }}>
+      <TimelineItem>
+        <TimelineSeparator style={{ height: "250px", gap: "10px" }}>
+          <FaDatabase
+            style={{
+              width: "40px",
+              height: "40px",
+              backgroundColor: "lightblue",
+              padding: "5px",
+              borderRadius: "20%",
+              color: "black",
+            }}
           />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          Grupo UMA
+          <div style={{ border: "1px solid red" }}>afafs</div>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem className={styles.timelineItem}>
-        <TimelineSeparator className={styles.timelineSeparator}>
-          <HiMiniComputerDesktop className={iconStyles.timelineIcon} />
-          <TimelineConnector className={styles.timelineConnector} />
-        </TimelineSeparator>
-        <TimelineContent className={styles.timelineContent}>
-          <ExperienceCard
-            title="Software Developer"
-            company="Freelancer"
-            date="2023-present"
-            description="Initiating my path as a software developer, I delve into the realm of coding and application development. Engaged in ongoing studies while actively crafting practical applications."
+      <TimelineItem>
+        <TimelineSeparator style={{ height: "250px", gap: "10px" }}>
+          <HiMiniComputerDesktop
+            style={{
+              width: "40px",
+              height: "40px",
+              backgroundColor: "lightblue",
+              padding: "5px",
+              borderRadius: "50%",
+              color: "black",
+            }}
           />
-        </TimelineContent>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>Successadvs</TimelineContent>
       </TimelineItem>
-      <TimelineItem className={styles.timelineItem}>
-        <TimelineSeparator className={styles.timelineSeparator}>
-          <FaMoneyCheckAlt className={iconStyles.timelineIcon} />
-        </TimelineSeparator>
-        <TimelineContent className={styles.timelineContent}>
-          <ExperienceCard
-            title="Digital Trafficker"
-            company="Freelancer"
-            date="2023-present"
-            description="I implement a dropshipping strategy, using Facebook Ads and Instagram Ads to drive sales and effectively reach target audiences."
+      <TimelineItem>
+        <TimelineSeparator>
+          <FaMoneyCheckAlt
+            style={{
+              width: "40px",
+              height: "40px",
+              backgroundColor: "lightblue",
+              padding: "5px",
+              borderRadius: "30%",
+              color: "black",
+            }}
           />
-        </TimelineContent>
+        </TimelineSeparator>
+        <TimelineContent>Succasdsadfsdsadess</TimelineContent>
       </TimelineItem>
     </Timeline>
   );

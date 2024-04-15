@@ -14,7 +14,6 @@ $colors: #8a2be2, #ff007f, #4682b4, #3cb371;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  background-color: #121212;
 
   @each $color in $colors {
     &:nth-child(#{length($colors)}n + #{index($colors, $color)}) {
