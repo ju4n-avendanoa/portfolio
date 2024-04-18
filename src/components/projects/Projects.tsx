@@ -71,8 +71,8 @@ const Project = ({ item }: { item: any }) => {
           className={styles.textContainer}
           style={{ y }}
           variants={{
-            hidden: { opacity: 0, y: 0.75 },
-            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
           initial="hidden"
           whileInView="visible"
