@@ -12,7 +12,7 @@ const items = [
   {
     id: 1,
     title: "World bnb",
-    img: "https://res.cloudinary.com/dhjqarghy/image/upload/v1713396066/portfolio/footballresults.vercel.app_c3yo61.png",
+    img: "https://res.cloudinary.com/dhjqarghy/image/upload/v1713453543/portfolio/FireShot_Capture_015_-_Worldbnb_-_localhost_njmewc.png",
     desc: "This web platform offers users the ability to register and list their properties for rental. With an intuitive interface, users can upload property images, set prices, and manage bookings. Visitors can search and filter properties based on their preferences, as well as make reservations for available dates. This application provides a comprehensive experience for those looking to rent or monetize their properties efficiently and securely.",
     github: "https://github.com/ju4n-avendanoa/Worldbnb",
     productionLink: "https://worldbnb.vercel.app",

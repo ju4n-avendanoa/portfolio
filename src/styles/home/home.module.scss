@@ -150,6 +150,7 @@ $blob-backgorund-opacity: 0.8;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
 
     @include md {
       flex-direction: row;
@@ -170,6 +171,11 @@ $blob-backgorund-opacity: 0.8;
       height: 45px;
       width: 160px;
       cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.04);
+      }
 
       @include md {
         font-size: 1rem;

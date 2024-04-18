@@ -8,7 +8,6 @@ import {
 } from "framer-motion";
 import { useEffect } from "react";
 import styles from "@/styles/home/home.module.scss";
-import Link from "next/link";
 
 const colors = ["#8A2BE2", "#FF007F", "#4682B4", "#3CB371"];
 
@@ -26,7 +25,7 @@ const variants = {
   },
 };
 
-function MainPageButton({ buttonName, icon }: Props) {
+function DownloadButton({ buttonName, icon }: Props) {
   const color = useMotionValue(colors[0]);
 
   useEffect(() => {
@@ -41,7 +40,11 @@ function MainPageButton({ buttonName, icon }: Props) {
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
   return (
-    <Link href={"/about"} className={styles.buttons}>
+    <a
+      href="https://res.cloudinary.com/dhjqarghy/image/upload/fl_attachment/v1713454171/portfolio/Juan_Avendano_CV_ssp49z.pdf"
+      download
+      className={styles.buttons}
+    >
       <motion.button
         variants={variants}
         initial="initial"
@@ -54,8 +57,8 @@ function MainPageButton({ buttonName, icon }: Props) {
         <span>{buttonName}</span>
         {icon}
       </motion.button>
-    </Link>
+    </a>
   );
 }
 
-export default MainPageButton;
+export default DownloadButton;
