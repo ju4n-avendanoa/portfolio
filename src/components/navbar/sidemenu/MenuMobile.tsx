@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ToggleButton from "./ToggleButton";
@@ -14,7 +16,7 @@ const variants = {
   closed: {
     clipPath: "circle(15px at calc(100% - 50px) 30px)",
     transition: {
-      duration: 1,
+      duration: 0.5,
       delay: 0.4,
     },
   },

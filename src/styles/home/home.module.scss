@@ -1,4 +1,4 @@
-@import "mixins";
+@import "../mixins";
 $photo-size-xs: 150px;
 $photo-size-sm: 175px;
 $photo-size-md: 200px;
@@ -45,6 +45,7 @@ $blob-backgorund-opacity: 0.8;
       justify-content: flex-start;
       gap: 20px;
       z-index: 10;
+      background-color: #121212;
 
       @include sm {
         font-size: 1.5rem;
@@ -112,6 +113,7 @@ $blob-backgorund-opacity: 0.8;
           justify-content: flex-start;
           gap: 10px;
           z-index: 10;
+          background-color: #121212;
         }
 
         h1 {
@@ -128,6 +130,7 @@ $blob-backgorund-opacity: 0.8;
         @include lg {
           font-size: 1.2rem;
           text-align: left;
+          background-color: #121212;
         }
       }
     }

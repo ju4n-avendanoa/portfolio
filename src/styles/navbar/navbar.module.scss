@@ -12,8 +12,28 @@
     padding: 20px 100px;
   }
 
-  h4 {
-    color: white;
+  .logo {
+    display: none;
+
+    @include sm {
+      display: block;
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 14px;
+
+    a {
+      height: 100%;
+    }
+
+    h4 {
+      color: white;
+    }
   }
 
   .menu {

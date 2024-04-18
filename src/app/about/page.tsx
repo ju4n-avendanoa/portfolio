@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 import { GoGear } from "react-icons/go";
 import { IoBag } from "react-icons/io5";
 import { FaInfo } from "react-icons/fa";
-import SkillsGrid from "@/components/SkillsGrid";
+import SkillsGrid from "@/components/about/SkillsGrid";
 import Skill from "@/components/skills/Skill";
 import styles from "@/styles/about/about.module.scss";
-import TimelineComponent from "@/components/Timeline";
-import EducationCard from "@/components/EducationCard";
-import iconStyles from "@/styles/aboutIcon.module.scss";
+import TimelineComponent from "@/components/about/Timeline";
+import EducationCard from "@/components/about/EducationCard";
+import iconStyles from "@/styles/about/aboutIcon.module.scss";
 
 function page() {
   return (
@@ -62,8 +62,8 @@ function page() {
           <IoExtensionPuzzleSharp className={iconStyles.icon} />
         </div>
         <p>
-          Highlighting key abilities to tackle challenges and deliver effective
-          solutions.
+          I emphasize key abilities to tackle challenges and deliver effective
+          solutions, while also reinforcing my existing skills.
         </p>
         <div className={styles.grid}>
           <SkillsGrid title="Frontend">
@@ -201,8 +201,8 @@ function page() {
           <IoBag className={iconStyles.icon} />
         </div>
         <p className={styles.description}>
-          Academic background providing a solid foundation to tackle the
-          challenges of the professional world.
+          Work history reflecting a commitment to excellence and a
+          results-oriented approach.
         </p>
         <TimelineComponent />
       </motion.section>
@@ -222,8 +222,8 @@ function page() {
           <FaGraduationCap className={iconStyles.icon} />
         </div>
         <p className={styles.description}>
-          Work history reflecting a commitment to excellence and a
-          results-oriented approach.
+          Academic background providing a solid foundation to tackle the
+          challenges of the professional world.
         </p>
         <div className={styles.degrees}>
           <EducationCard

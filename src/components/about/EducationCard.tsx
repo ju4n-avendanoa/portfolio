@@ -1,4 +1,4 @@
-import styles from "@/styles/educationCard.module.scss";
+import styles from "@/styles/about/educationCard.module.scss";
 
 type Props = {
   degree: string;

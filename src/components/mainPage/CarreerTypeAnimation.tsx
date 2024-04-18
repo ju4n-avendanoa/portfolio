@@ -1,7 +1,7 @@
 "use client";
 
 import { TypeAnimation } from "react-type-animation";
-import styles from "@/styles/carreer.module.scss";
+import styles from "@/styles/home/carreer.module.scss";
 
 export default function CarreerTypeAnimation() {
   return (

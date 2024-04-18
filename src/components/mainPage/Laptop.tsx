@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CarreerTypeAnimation from "../CarreerTypeAnimation";
-import styles from "@/styles/home.module.scss";
-import Photo from "../Photo";
+import CarreerTypeAnimation from "./CarreerTypeAnimation";
+import styles from "@/styles/home/home.module.scss";
+import Photo from "./Photo";
 
 const textVariants = {
   initial: {
@@ -40,7 +40,7 @@ function Laptop() {
         </motion.div>
         <motion.p className={styles.intro} variants={textVariants}>
           Welcome to my portfolio! I&apos;m a passionate Fullstack developer
-          from Colombia. I strive to deliver excellence in every project.
+          from Colombia. <br />I strive to deliver excellence in every project.
           <br />
           <br />
           Let&apos;s create something remarkable together!

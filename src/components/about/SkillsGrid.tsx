@@ -1,4 +1,4 @@
-import styles from "@/styles/skillsGrid.module.scss";
+import styles from "@/styles/about/skillsGrid.module.scss";
 import { ReactNode } from "react";
 
 type Props = {

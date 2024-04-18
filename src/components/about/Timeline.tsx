@@ -3,16 +3,17 @@
 import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
 import { FaMoneyCheckAlt } from "react-icons/fa";
-import { FaDatabase } from "react-icons/fa6";
+import { TimelineDot } from "@mui/lab";
 import { createTheme } from "@mui/material/styles";
+import { FaDatabase } from "react-icons/fa6";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import ExperienceCard from "./ExperienceCard";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Timeline from "@mui/lab/Timeline";
-import iconStyles from "@/styles/iconTimeline.module.scss";
-import styles from "@/styles/timeline.module.scss";
+import iconStyles from "@/styles/about/iconTimeline.module.scss";
+import styles from "@/styles/about/timeline.module.scss";
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {
@@ -26,7 +27,7 @@ function TimelineComponent() {
       values: {
         xs: 0,
         sm: 376,
-        md: 769,
+        md: 768,
         lg: 1025,
         xl: 1441,
         xxl: 2561,
@@ -52,7 +53,9 @@ function TimelineComponent() {
       <TimelineItem className={styles.timelineItem}>
         <TimelineSeparator className={styles.timelineSeparator}>
           <FaDatabase className={iconStyles.timelineIcon} />
-          <TimelineConnector className={styles.timelineConnector} />
+          <TimelineConnector
+            className={`${styles.timelineConnector} ${styles.connector1}`}
+          />
         </TimelineSeparator>
         <TimelineContent className={styles.timelineContent}>
           <ExperienceCard
@@ -66,7 +69,9 @@ function TimelineComponent() {
       <TimelineItem className={styles.timelineItem}>
         <TimelineSeparator className={styles.timelineSeparator}>
           <HiMiniComputerDesktop className={iconStyles.timelineIcon} />
-          <TimelineConnector className={styles.timelineConnector} />
+          <TimelineConnector
+            className={`${styles.timelineConnector} ${styles.connector2}`}
+          />
         </TimelineSeparator>
         <TimelineContent className={styles.timelineContent}>
           <ExperienceCard
@@ -80,6 +85,19 @@ function TimelineComponent() {
       <TimelineItem className={styles.timelineItem}>
         <TimelineSeparator className={styles.timelineSeparator}>
           <FaMoneyCheckAlt className={iconStyles.timelineIcon} />
+          <TimelineConnector
+            className={`${styles.timelineConnector} ${styles.connector3}`}
+          />
+          <TimelineDot
+            // color="secondary"
+            style={{
+              textAlign: "center",
+              width: "20px",
+              height: "20px",
+              margin: "4px auto",
+              backgroundColor: "lightblue",
+            }}
+          />
         </TimelineSeparator>
         <TimelineContent className={styles.timelineContent}>
           <ExperienceCard

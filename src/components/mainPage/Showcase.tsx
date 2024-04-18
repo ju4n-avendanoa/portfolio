@@ -7,7 +7,7 @@ import {
   useMotionValue,
 } from "framer-motion";
 import { ReactNode, useEffect } from "react";
-import styles from "@/styles/showcase.module.scss";
+import styles from "@/styles/home/showcase.module.scss";
 
 const colors = ["#8A2BE2", "#FF007F", "#4682B4", "#3CB371"];
 

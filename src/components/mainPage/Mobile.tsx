@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CarreerTypeAnimation from "../CarreerTypeAnimation";
-import styles from "@/styles/home.module.scss";
-import Photo from "../Photo";
+import CarreerTypeAnimation from "./CarreerTypeAnimation";
+import styles from "@/styles/home/home.module.scss";
+import Photo from "./Photo";
 
 const textVariants = {
   initial: {

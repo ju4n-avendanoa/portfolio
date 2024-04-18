@@ -1,0 +1,182 @@
+@import "../mixins.scss";
+
+.portfolio {
+  position: relative;
+  padding: 0 20px;
+
+  .progress {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 36px;
+    z-index: 20;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    text-align: center;
+
+    @include lg {
+      position: fixed;
+    }
+
+    h1 {
+      color: white;
+      font-size: 1.8rem;
+
+      @include lg {
+        font-size: 2.2rem;
+      }
+    }
+
+    .progressBar {
+      height: 5px;
+      background-color: #ff007f;
+
+      @include md {
+        height: 8px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 111px);
+
+    @include md {
+      overflow: hidden;
+    }
+
+    @include lg {
+      height: 100vh;
+    }
+
+    .wrapper {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 500px;
+
+      @include md {
+        width: 50%;
+      }
+
+      @include lg {
+        flex-direction: row;
+        gap: 30px;
+        margin: auto;
+        max-width: 1000px;
+        width: auto;
+      }
+
+      .imageContainer {
+        flex: 1;
+        height: 50%;
+        width: 100%;
+
+        @include lg {
+          height: 20%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 10px;
+
+          @include md {
+            object-fit: fill;
+          }
+
+          @include lg {
+            object-fit: cover;
+          }
+        }
+      }
+
+      .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #121212;
+        width: 100%;
+
+        @include mobile {
+          transform: none !important;
+        }
+        @include lg {
+          gap: 30px;
+        }
+
+        h2 {
+          color: white;
+          font-size: 1.4rem;
+          text-align: center;
+
+          @include lg {
+            font-size: 1.8rem;
+            text-align: left;
+          }
+        }
+
+        p {
+          color: white;
+          font-size: 0.8rem;
+          text-align: center;
+
+          @include lg {
+            font-size: 1rem;
+            text-align: left;
+          }
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          width: 100%;
+
+          @include lg {
+            justify-content: flex-start;
+          }
+
+          button {
+            background-color: #121212;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+            cursor: pointer;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+              transform: scale(1.03);
+            }
+
+            @include lg {
+              width: 130px;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

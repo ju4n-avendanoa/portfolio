@@ -1,5 +1,5 @@
 import ImageWithFallback from "@/components/ImageWithFallback";
-import styles from "@/styles/Photo.module.scss";
+import styles from "@/styles/home/Photo.module.scss";
 
 function Photo() {
   return (

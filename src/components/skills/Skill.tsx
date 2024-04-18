@@ -1,4 +1,4 @@
-import styles from "@/styles/skill.module.scss";
+import styles from "@/styles/about/skill.module.scss";
 import Image from "next/image";
 
 type Props = {

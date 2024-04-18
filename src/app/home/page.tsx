@@ -3,8 +3,8 @@ import { IoMdDownload } from "react-icons/io";
 import MainPageButton from "@/components/mainPage/MainPageButton";
 import Mobile from "@/components/mainPage/Mobile";
 import Laptop from "@/components/mainPage/Laptop";
-import styles from "@/styles/home.module.scss";
-import Showcase from "@/components/Showcase";
+import styles from "@/styles/home/home.module.scss";
+import Showcase from "@/components/mainPage/Showcase";
 
 export default function Home() {
   return (

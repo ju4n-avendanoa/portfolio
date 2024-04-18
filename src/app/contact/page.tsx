@@ -1,7 +1,12 @@
-import React from "react";
+import Contact from "@/components/contact/Contact";
+import styles from "@/styles/contact/contact.module.scss";
 
-function page() {
-  return <div>page</div>;
+function ContactPage() {
+  return (
+    <main className={styles.main}>
+      <Contact />
+    </main>
+  );
 }
 
-export default page;
+export default ContactPage;

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import { Toaster } from "sonner";
 import { Mulish } from "next/font/google";
-import "@/styles/globals.css";
-import Navbar from "@/components/navbar/Navbar";
-import styles from "@/styles/header.module.scss";
-import Provider from "@/context/Provider";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import StarsBackground from "@/components/Stars";
+import Provider from "@/context/Provider";
+import styles from "@/styles/header.module.scss";
+import Navbar from "@/components/navbar/Navbar";
+import "@/styles/globals.css";
 
 const mulish = Mulish({ subsets: ["latin"] });
 
@@ -28,6 +28,7 @@ export default function RootLayout({
             <Navbar />
           </header>
           {children}
+          <Toaster />
         </Provider>
       </body>
     </html>

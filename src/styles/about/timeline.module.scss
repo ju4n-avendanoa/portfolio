@@ -1,0 +1,63 @@
+@import "../mixins.scss";
+
+.timeline {
+  width: 100%;
+
+  .timelineItem {
+    .timelineSeparator {
+      .timelineConnector {
+        &.connector1 {
+          height: 425px;
+
+          @include sm {
+            height: 300px;
+          }
+
+          @include md {
+            height: 275px;
+          }
+
+          @include lg {
+            height: 400px;
+          }
+
+          @include xl {
+            height: 400px;
+          }
+
+          @include xxl {
+            height: 250px;
+          }
+        }
+
+        &.connector2 {
+          height: 300px;
+
+          @include sm {
+            height: 225px;
+          }
+
+          @include md {
+            height: 200px;
+          }
+
+          @include lg {
+            height: 275px;
+          }
+
+          @include xl {
+            height: 250px;
+          }
+
+          @include xxl {
+            height: 200px;
+          }
+        }
+
+        &.connector3 {
+          height: auto;
+        }
+      }
+    }
+  }
+}
