@@ -14,12 +14,22 @@ $blob-backgorund-opacity: 0.8;
   color: white;
   padding: 60px 10px 30px;
   gap: 40px;
+  position: relative;
+  z-index: 20;
 
   @include lg {
     align-items: flex-start;
     justify-content: center;
     padding: 60px 15% 30px;
     gap: 60px;
+  }
+
+  @include xl {
+    padding: 60px 20% 30px;
+  }
+
+  @include xxl {
+    padding: 60px 30% 30px;
   }
 
   .mobile {
@@ -87,7 +97,7 @@ $blob-backgorund-opacity: 0.8;
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      z-index: 10;
+      // max-width: ;
     }
 
     @include xl {
@@ -149,52 +159,57 @@ $blob-backgorund-opacity: 0.8;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     text-decoration: none;
+    width: 100%;
 
     @include md {
       flex-direction: row;
     }
 
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      color: white;
-      background-color: transparent;
-      z-index: 10;
-      padding: 10px 20px;
-      border-radius: 10px;
-      transition: transform 1s;
-      font-size: 0.8rem;
-      height: 45px;
-      width: 160px;
-      cursor: pointer;
-      transition: transform 0.2s ease-in-out;
-
-      &:hover {
-        transform: scale(1.04);
-      }
-
-      @include md {
-        font-size: 1rem;
-        padding: 10px 20px;
-        width: 180px;
-      }
-
-      @include lg {
-        // transform: translateX(10vw);
-      }
-
-      .buttonIcon {
-        height: 15px;
-        width: 15px;
-      }
+    @include lg {
+      justify-content: flex-start;
     }
 
-    button:active {
-      transform: scale(0.9);
+    a {
+      max-width: fit-content;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: white;
+        background-color: transparent;
+        z-index: 10;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: transform 1s;
+        font-size: 0.8rem;
+        height: 45px;
+        width: 160px;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.04);
+        }
+
+        @include md {
+          font-size: 1rem;
+          padding: 10px 20px;
+          width: 180px;
+        }
+
+        @include lg {
+          width: 200px;
+        }
+      }
+
+      button:active {
+        transform: scale(0.9);
+      }
     }
   }
 }

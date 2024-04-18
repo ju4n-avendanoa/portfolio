@@ -50,21 +50,6 @@ function Navbar() {
             }}
           />
         </Link>
-        <Link
-          href="https://www.instagram.com/juanfer9412"
-          style={{ textDecoration: "none" }}
-          target="_blank"
-        >
-          <ImageWithFallback
-            src={
-              "https://res.cloudinary.com/dhjqarghy/image/upload/v1713415826/portfolio/instagram-1-svgrepo-com_s6lrqu.svg"
-            }
-            alt="instagram"
-            width={20}
-            height={20}
-            fallbackSrc=""
-          />
-        </Link>
       </div>
       <MenuMobile />
       <Menu />

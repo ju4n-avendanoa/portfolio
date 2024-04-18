@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import styles from "@/styles/NotFound.module.scss";
+import styles from "@/styles/notFound.module.scss";
 
 function Error() {
   return (
