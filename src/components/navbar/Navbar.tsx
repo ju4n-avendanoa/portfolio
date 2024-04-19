@@ -26,7 +26,7 @@ function Navbar() {
             fallbackSrc=""
             style={{
               backgroundColor: "white",
-              borderRadius: "2px",
+              borderRadius: "4px",
             }}
           />
         </Link>

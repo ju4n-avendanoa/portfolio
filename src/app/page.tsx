@@ -16,12 +16,9 @@ function MainPage() {
         <div className={styles.buttons}>
           <MainPageButton
             buttonName={"About"}
-            icon={<FaArrowUpRightFromSquare className={styles.buttons} />}
+            icon={<FaArrowUpRightFromSquare />}
           />
-          <DownloadButton
-            buttonName={"Download CV"}
-            icon={<IoMdDownload className={styles.buttons} />}
-          />
+          <DownloadButton buttonName={"Download CV"} icon={<IoMdDownload />} />
         </div>
       </section>
     </Showcase>
