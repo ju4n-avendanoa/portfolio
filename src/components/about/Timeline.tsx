@@ -77,7 +77,7 @@ function TimelineComponent() {
           <ExperienceCard
             title="Software Developer"
             company="Freelancer"
-            date="2023-present"
+            date="2022-present"
             description="Initiating my path as a software developer, I delve into the realm of coding and application development. Engaged in ongoing studies while actively crafting practical applications."
           />
         </TimelineContent>
